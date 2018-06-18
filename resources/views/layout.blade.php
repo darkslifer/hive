@@ -39,8 +39,21 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <form class="form-inline mt-2 mt-md-0" id ='vsForm'>
+                <select class="selectpicker" name='server' style="margin-right: 10px;">
+                    <option value="" selected="" required hidden="">Servidor </option>
+                    <option value="ru">RU</option>
+                    <option value="kr">KR</option>
+                    <option value="br1">BR1</option>
+                    <option value="oc1">OC1</option>
+                    <option value="jp1">JP1</option>
+                    <option value="na1">NA1</option>
+                    <option value="euw1">EUW1</option>
+                    <option value="tr1">TR1</option>
+                    <option value="la1">LA1</option>
+                    <option value="la2">LA2</option>
+                </select>
+                <input class="form-control mr-sm-2" type="text" placeholder="Nombre de invocador" aria-label="Search" name='name'>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
