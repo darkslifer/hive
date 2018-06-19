@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChampionsTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateChampionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('champions',function (Blueprint $table){
-           $table->unsignedInteger('id_champ');
-           $table->string('champ_name');
+        Schema::create('types', function (Blueprint $table) {
+            $table->unsignedInteger('type_id','name');
+            $table->string('type_name');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateChampionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('champions');
+        Schema::dropIfExists('types');
     }
 }
