@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChampionsTable extends Migration
+class CreateRecommendedTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateChampionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('champions',function (Blueprint $table){
-           $table->unsignedInteger('id_champ');
-           $table->string('champ_name');
+        Schema::create('recommended', function (Blueprint $table) {
+            $table->unsignedInteger('recommended_id');
+            $table->unsignedInteger('champ_id');
+            $table->unsignedInteger('item_id');
+            $table->unsignedInteger('type_id');
         });
     }
 
@@ -26,6 +28,6 @@ class CreateChampionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('champions');
+        Schema::dropIfExists('recommended');
     }
 }
